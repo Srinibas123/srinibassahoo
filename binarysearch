@@ -1,0 +1,28 @@
+
+
+import java.util.*;
+
+public class binarysearch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("enter a no. between 1-10");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int [] array= {1,2,3,4,5,6,7,8,9,10};
+		int f=0;int l=0;
+		if (n==array[l])System.out.println("index of your no.is:" +l);
+		else if (n==array[f])System.out.println("index of your no. is" +f);
+		else
+		{
+			while(n<=array[l]) {
+				int m=(f=l)/2;
+				if (n==array[m]) {System.out.println("index of your no.is" +m);}
+				else if (n<=array[m]) {l=m; m=(f+l)/2;}
+				else if (n>=array[m]) {f=m; m=(f+l)/2;}
+			}
+		}
+	}
+
+}
